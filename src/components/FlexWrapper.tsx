@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type FlexWrapperProps = {
-    direction?: string
+    flexDirection?: string
     justifyContent?: string
     alignItems?: string
     wrap?: string
@@ -9,7 +9,7 @@ type FlexWrapperProps = {
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
     display: flex;
-    flex-direction: ${props => props.direction || 'row'};
+    flex-direction: ${props => props.flexDirection || 'row'};
     justify-content: ${props => props.justifyContent || 'flex-start'};
     align-items: ${props => props.alignItems || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};

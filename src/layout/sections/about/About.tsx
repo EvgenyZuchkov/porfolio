@@ -1,18 +1,20 @@
 import styled from "styled-components";
+import {SectionTittle} from "../../../components/SectionTittle.tsx";
+import {Description} from "../../../components/Description.tsx";
 
 export const About = () => {
     return (
         <StyledAbout>
 
             <StyledAboutPart>
-                <StyledTitle>About Me</StyledTitle>
-                <StyledAboutDescription>The Generator App is an online tool that helps you to export ready-made templates ready to work as your
+                <SectionTittle>About Me</SectionTittle>
+                <Description>The Generator App is an online tool that helps you to export ready-made templates ready to work as your
                     future website. It helps you to combine slides, panels and other components and export it as a set of
-                    static files: HTML/CSS/JS.</StyledAboutDescription>
+                    static files: HTML/CSS/JS.</Description>
             </StyledAboutPart>
 
             <StyledAboutPart>
-                <StyledTitle>Work Experience</StyledTitle>
+                <SectionTittle>Work Experience</SectionTittle>
                 <StyledWork>
                     <div>
                         <h3>Junior Web Developer</h3>
@@ -31,7 +33,7 @@ export const About = () => {
             </StyledAboutPart>
 
             <StyledAboutPart>
-                <StyledTitle>Education</StyledTitle>
+                <SectionTittle>Education</SectionTittle>
                 <StyledWork>
                     <div>
                         <h3>Bachelor in Electronics & Communication</h3>
@@ -58,12 +60,6 @@ const StyledAbout = styled.section`
 `
 
 const StyledAboutPart = styled.div`
-`
-
-const StyledTitle = styled.h2`
-`
-
-const StyledAboutDescription = styled.p`
 `
 
 const StyledWork = styled.div`
