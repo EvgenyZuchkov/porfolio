@@ -10,9 +10,9 @@ export const Header = () => {
             <Logo/>
             <Menu/>
             <StyledLinksContainer>
-                <Link iconId={'icon-github-darkgray'}/>
-                <Link iconId={'icon-twitter-darkgray'}/>
-                <Link iconId={'icon-linkedin'}/>
+                <Link iconId={'icon-github-darkgray'} width={'30px'}/>
+                <Link iconId={'icon-twitter-darkgray'} width={'30px'}/>
+                <Link iconId={'icon-linkedin'} width={'30px'}/>
             </StyledLinksContainer>
         </StyledHeader>
     );
