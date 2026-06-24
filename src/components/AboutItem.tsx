@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import fullTime from '../../src/assets/images/full-time.png'
-import intership from '../../src/assets/images/intership.png'
 import {Icon} from "./icon/Icon.tsx";
 
 type AboutItemPropsType = {
     title: string
-    fullWorkTime: boolean
+    src: string
     company: string
     location?: string
     periodOfWork: string
@@ -13,40 +11,43 @@ type AboutItemPropsType = {
 
 export const AboutItem = (props: AboutItemPropsType) => {
     return (
-        <div>
-            <StyledFirstBlock>
-                <StyledAboutTitle>{props.title}</StyledAboutTitle>
-                <StyledWorkTime src={props.fullWorkTime ? fullTime : intership} width={'84px'} height={'24px'}/>
-            </StyledFirstBlock>
+        <StyledAboutItem>
+            <FirstBlock>
+                <Title>{props.title}</Title>
+                <WorkTime src={props.src} width={'84px'} height={'24px'}/>
+            </FirstBlock>
 
-            <StyledSecondBlock>
+            <SecondBlock>
                 <Icon iconId="icon-grid" width="12px" height="12px"/>
-                <StyledText>{props.company}</StyledText>
+                <Text>{props.company}</Text>
 
                 <Icon iconId="icon-eye-small" width="12px" height="12px"/>
-                <StyledText>{props.location}</StyledText>
+                <Text>{props.location}</Text>
 
                 <Icon iconId="icon-table" width="16px" height="12px"/>
-                <StyledText>{props.periodOfWork}</StyledText>
-            </StyledSecondBlock>
-        </div>
+                <Text>{props.periodOfWork}</Text>
+            </SecondBlock>
+        </StyledAboutItem>
     )
 }
 
-const StyledAboutTitle = styled.h3`
+const StyledAboutItem = styled.div`
 `
 
-const StyledWorkTime = styled.img`
+const Title = styled.h3`
 `
 
-const StyledFirstBlock = styled.div`
+const WorkTime = styled.img`
+`
+
+const FirstBlock = styled.div`
     display: flex;
     justify-content: space-between;
 `
 
-const StyledSecondBlock = styled.div`
+const SecondBlock = styled.div`
     display: flex;
     justify-content: space-between;
 `
 
-const StyledText = styled.p``
+const Text = styled.p``

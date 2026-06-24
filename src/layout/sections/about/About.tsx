@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {SectionTittle} from "../../../components/SectionTittle.tsx";
 import {Description} from "../../../components/Description.tsx";
 import {AboutItem} from "../../../components/AboutItem.tsx";
+import fullTime from '../../../assets/images/full-time.png'
+import intership from '../../../assets/images/intership.png'
 
 export const About = () => {
     return (
@@ -19,17 +21,17 @@ export const About = () => {
             <StyledAboutPart>
                 <SectionTittle>Work Experience</SectionTittle>
                 <AboutItem title={'Junior Web Developer'}
-                           fullWorkTime={true}
+                           src={fullTime}
                            company={'Dr. Rajkumar’s Learning App'}
                            location={'Bengaluru'}
                            periodOfWork={'Sep 2021 - Dec 2021'}/>
                 <AboutItem title={'Web Development Intern'}
-                           fullWorkTime={false}
+                           src={intership}
                            company={'IonPixelz Web Solutions'}
                            location={'Bengaluru'}
                            periodOfWork={'Sep 2021 - Dec 2021'}/>
                 <AboutItem title={'SEO / SEM Specialist'}
-                           fullWorkTime={false}
+                           src={intership}
                            company={'HAAPS'}
                            location={'Bengaluru'}
                            periodOfWork={'Sep 2021 - Dec 2021'}/>
@@ -38,7 +40,7 @@ export const About = () => {
             <StyledAboutPart>
                 <SectionTittle>Education</SectionTittle>
                 <AboutItem title={'Bachelor in Electronics & Communication'}
-                           fullWorkTime={true}
+                           src={fullTime}
                            company={'Bangalore Instutute of Technology'}
                            periodOfWork={'Aug 2015 - Dec 2020'}/>
             </StyledAboutPart>
@@ -49,6 +51,7 @@ export const About = () => {
 
 const StyledAbout = styled.section`
     max-width: 710px;
+    width: 100%;
 `
 
 const StyledAboutPart = styled.div`
