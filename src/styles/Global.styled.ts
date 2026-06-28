@@ -16,6 +16,10 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${Theme.colors.background};
         color: ${Theme.colors.primaryText};
     }
+    
+    section {
+        margin-bottom: 200px;
+    }
 
     a,
     a:visited {
