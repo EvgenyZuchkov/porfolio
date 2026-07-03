@@ -10,9 +10,9 @@ export const Main = () => {
             <Container>
                 <FlexWrapper justifyContent={'center'} alignItems={'center'} gap={'198px'}>
                     <Title>
-                        Hi 👋,<br/>
-                        My name is <br/>
-                        <span>Pavan MG</span><br/>
+                        <div>Hi 👋,</div>
+                        <div>My name is</div>
+                        <div><span>Pavan MG</span></div>
                         I build things for web
                     </Title>
 

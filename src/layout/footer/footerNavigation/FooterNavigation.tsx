@@ -1,25 +1,34 @@
 import styled from "styled-components";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 export const FooterNavigation = () => {
     return (
-        <StyledFooterNavigation>
-            <Item><Link>Home</Link></Item>
-            <Item><Link>About</Link></Item>
-            <Item><Link>Technologies</Link></Item>
-            <Item><Link>Projects</Link></Item>
-            <Item><Link>Contact</Link></Item>
-        </StyledFooterNavigation>
+        <StylesFooterNavigation>
+            <FooterNavList>
+                <FlexWrapper flexDirection={'row'}  gap={'52px'}>
+                    <Item><Link href={'#'}>Home</Link></Item>
+                    <Item><Link href={'#'}>About</Link></Item>
+                    <Item><Link href={'#'}>Technologies</Link></Item>
+                    <Item><Link href={'#'}>Projects</Link></Item>
+                    <Item><Link href={'#'}>Contact</Link></Item>
+                </FlexWrapper>
+            </FooterNavList>
+        </StylesFooterNavigation>
+
 
     )
 }
 
-const StyledFooterNavigation = styled.div`
-    display: flex;
-    gap: 20px
+const StylesFooterNavigation = styled.nav`
+    margin-bottom: 61px;
+`
+
+const FooterNavList = styled.ul`
 `
 
 const Item = styled.li`
 `
 
 const Link = styled.a`
+
 `

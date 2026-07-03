@@ -6,5 +6,6 @@ export const Theme = {
         backgroundInput: '#252527',
         formFontColor: '#495057',
         formBorderColor: '#4a4a4a',
+        pseudoBorderColor: '#42446e',
     }
 }

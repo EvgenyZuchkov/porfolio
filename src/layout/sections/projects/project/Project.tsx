@@ -24,7 +24,7 @@ export const Project = (props: ProjectPropsType) => {
                             <Icon iconId={'icon-chain-white'} width={'20px'} height={'20px'}/>
                             <LinkText>Live Preview</LinkText>
                         </FlexWrapper>
-                        <FlexWrapper>
+                        <FlexWrapper gap={'12px'}>
                             <Icon iconId={'icon-github-white-20'} width={'20px'} height={'20px'}/>
                             <LinkText>View Code</LinkText>
                         </FlexWrapper>

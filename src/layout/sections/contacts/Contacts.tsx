@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import {SectionTittle} from "../../../components/SectionTittle.tsx";
 import {Container} from "../../../components/Container.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Theme} from "../../../styles/Theme.ts";
+import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
 
 export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
                 <FlexWrapper flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-                    <SectionTittle>Contacts</SectionTittle>
+                    <SectionTittleBlock tittle={'Contacts'}/>
                     <StyledForm>
                         <Field placeholder={'Enter your name...'}/>
                         <Field placeholder={'Enter your email...'}/>
