@@ -1,28 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import babel from '@rolldown/plugin-babel'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  // base: '/porfolio/',
+  plugins: [
+    react(),
+
+    babel({
+      plugins: [
+        [
+          'babel-plugin-styled-components',
+          {
+            displayName: true,
+            fileName: true,
+            ssr: true,
+          },
+        ],
+      ],
+    }),
+  ],
+
+  // base: '/portfolio/',
 })
-
-// import { defineConfig } from 'vite';
-// import react from '@vitejs/plugin-react';
-//
-//
-// export default defineConfig({
-//   plugins: [
-//     react({
-//       babel: {
-//         plugins: ['babel-plugin-styled-components'],
-//       },
-//     }),
-//   ],
-//   resolve: {
-//     alias: {
-//       '@': '/src',
-//     },
-//   },
-// });
-
