@@ -9,7 +9,7 @@ export const Contacts = () => {
         <StyledContacts>
             <Container>
                 <FlexWrapper flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-                    <SectionTittleBlock tittle={'Contacts'}/>
+                    <SectionTittleBlock tittle={'Contacts'} marginBottom={'50px'}/>
                     <StyledForm>
                         <Field placeholder={'Enter your name...'}/>
                         <Field placeholder={'Enter your email...'}/>

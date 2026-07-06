@@ -25,8 +25,8 @@ export const Footer = () => {
                     <BottomBlock>
                         <FlexWrapper flexDirection={'row'} justifyContent={'space-between'}>
                             <FooterNavigation/>
-                            <Text>Designed and built
-                                by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></Text>
+                            <Text><span>Designed and built
+                                by </span>Pavan MG <span>with</span> Love <span>& </span>Coffee</Text>
                         </FlexWrapper>
                     </BottomBlock>
                 </FlexWrapper>
@@ -45,7 +45,7 @@ const StyledFooter = styled.footer`
 
 const UpBlock = styled.div`
     position: relative;
-    
+
     &::before {
         content: "";
         display: block;
@@ -68,25 +68,14 @@ const Email = styled.a`
 
 const Text = styled.span`
     text-align: center;
+    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-    span:nth-child(1) {
-        background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    span:nth-child(2) {
-        background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    span:nth-child(3) {
-        background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    span {
+        background: none;
+        color: ${Theme.colors.primaryText};
+        -webkit-text-fill-color: ${Theme.colors.primaryText};
     }
 `

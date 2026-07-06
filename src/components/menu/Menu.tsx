@@ -1,25 +1,22 @@
 import styled from "styled-components";
 
 export const Menu = () => {
+
+    const itemsLinks = [
+        'Home',
+        'About',
+        'Tech Stack',
+        'Projects',
+        'Contact',
+    ]
+
     return (
         <StyledNav>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Tech Stack</a>
-                </li>
-                <li>
-                    <a href="">Projects</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
-            </ul>
+            <NavList>
+                {itemsLinks.map(link => (
+                    <Item key={link}><Link href="#">{link}</Link></Item>
+                ))}
+            </NavList>
         </StyledNav>
     );
 };
@@ -30,4 +27,14 @@ const StyledNav = styled.nav`
         gap: 54px;
         list-style: none;
     }
+`
+
+const NavList = styled.ul`
+`
+
+const Item = styled.li`
+`
+
+const Link = styled.a`
+
 `

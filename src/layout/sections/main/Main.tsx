@@ -8,7 +8,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justifyContent={'center'} alignItems={'center'} gap={'198px'}>
+                <FlexWrapper justifyContent={'center'} alignItems={'center'} gap={'198px'} height={'100%'}>
                     <Title>
                         <div>Hi 👋,</div>
                         <div>My name is</div>
@@ -28,6 +28,7 @@ export const Main = () => {
 const StyledMain = styled.section`
     min-height: 100vh;
     display: flex;
+    overflow-x: clip;
 `
 
 const Title = styled.span`

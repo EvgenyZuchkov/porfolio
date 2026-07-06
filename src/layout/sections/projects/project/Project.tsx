@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
-import {Icon} from "../../../../components/icon/Icon.tsx";
 import {Theme} from "../../../../styles/Theme.ts";
+import {Link} from "./link/Link.tsx";
 
 type ProjectPropsType = {
     img: string
@@ -10,27 +10,39 @@ type ProjectPropsType = {
 }
 
 export const Project = (props: ProjectPropsType) => {
+    const links = [
+        {
+            text: 'Live Preview',
+            iconId: 'icon-chain-white'
+        },
+        {
+            text: 'View Code',
+            iconId: 'icon-github-white-20'
+        },
+
+    ]
+
     return (
         <StyledProject>
-            <Image src={props.img} alt="Project Image"/>
+            <FlexWrapper flexDirection={'column'} height={'100%'}>
+                <Image src={props.img} alt="Project Image"/>
 
-            <StyledProjectText>
-                <FlexWrapper flexDirection="column" gap={'0px'}>
-                    <Title>{props.title}</Title>
-                    <Description>{props.description}</Description>
-                    <Stack>Tech stack : <span>HTML , JavaScript, SASS, React</span></Stack>
-                    <FlexWrapper gap={'48px'}>
-                        <FlexWrapper gap={'10px'}>
-                            <Icon iconId={'icon-chain-white'} width={'20px'} height={'20px'}/>
-                            <LinkText>Live Preview</LinkText>
-                        </FlexWrapper>
-                        <FlexWrapper gap={'12px'}>
-                            <Icon iconId={'icon-github-white-20'} width={'20px'} height={'20px'}/>
-                            <LinkText>View Code</LinkText>
+                <StyledProjectText>
+                    <FlexWrapper flexDirection="column" gap={'0px'} height={'100%'}>
+                        <Title>{props.title}</Title>
+                        <Description>{props.description}</Description>
+                        <Stack>Tech stack : <span>HTML , JavaScript, SASS, React</span></Stack>
+                        <FlexWrapper gap={'48px'}>
+
+                            {links.map((link, index) => (
+                                <Link key={index }text={link.text} iconId={link.iconId}/>
+                            ))}
+
                         </FlexWrapper>
                     </FlexWrapper>
-                </FlexWrapper>
-            </StyledProjectText>
+                </StyledProjectText>
+            </FlexWrapper>
+
 
         </StyledProject>
     )
@@ -50,9 +62,11 @@ const Image = styled.img`
 `
 
 const StyledProjectText = styled.div`
-    padding: 27px`
+    padding: 27px;
+    flex-grow: 1;
+`
 
-const Title = styled.h2`
+const Title = styled.h3`
     font-weight: 500;
     font-size: 28px;
     line-height: 0.92857;
@@ -65,6 +79,7 @@ const Description = styled.p`
     line-height: 1.44444;
     color: ${Theme.colors.secondaryText};
     margin: 17px 0 12px;
+    flex-grow: 1;
 `
 
 const Stack = styled.p`
@@ -72,20 +87,11 @@ const Stack = styled.p`
     font-size: 16px;
     line-height: 1.625;
     color: ${Theme.colors.secondaryText};
+    margin-bottom: 24px;
 
     span {
         font-weight: 300;
         font-size: 14px;
     }
-
-    margin-bottom: 24px;
 `
 
-const LinkText = styled.a`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.625;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #fff;
-`

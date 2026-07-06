@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     section {
-        margin-bottom: 200px;
+        padding: 100px 0;
     }
 
     a,

@@ -10,32 +10,52 @@ import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
 
 export const Projects = () => {
+    const projectItems = [
+        {
+            img: FirstImg,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        },
+        {
+            img: SecondImg,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        },
+        {
+            img: ThirtyImage,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        },
+        {
+            img: FourthImage,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        },
+        {
+            img: FivesImg,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        },
+        {
+            img: SixImg,
+            title: 'Project Tile goes here',
+            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        }
+    ]
+
     return (
         <StyledProjects>
             <SectionTittleBlock tittle={'Projects'} text={'Things I’ve built so far'}/>
-            <StyledProjectsWrap>
                 <FlexWrapper gap={'48px'} wrap={'wrap'} justifyContent={'center'}>
-                    <Project img={FirstImg} title={'Project Tile goes here'}
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>
-                    <Project img={SecondImg} title={'Project Tile goes here'}
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>
-                    <Project img={ThirtyImage} title={'Project Tile goes here'}
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>
-                    <Project img={FourthImage} title={'Project Tile goes here'}
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>
-                    <Project img={FivesImg} title={'Project Tile goes here'}
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>
-                    <Project img={SixImg} title={'Project Tile goes here'}
-                             description={'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'}/>
+
+                    {projectItems.map((item, index) => (
+                        <Project key={index} img={item.img} title={item.title} description={item.description}/>
+                    ))}
+
                 </FlexWrapper>
-            </StyledProjectsWrap>
         </StyledProjects>
     )
 }
 
 const StyledProjects = styled.section`
-`
-
-const StyledProjectsWrap = styled.div`
-    margin-top: 113px
 `
