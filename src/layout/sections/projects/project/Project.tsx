@@ -35,7 +35,7 @@ export const Project = (props: ProjectPropsType) => {
                         <FlexWrapper gap={'48px'}>
 
                             {links.map((link, index) => (
-                                <Link key={index }text={link.text} iconId={link.iconId}/>
+                                <Link key={index } text={link.text} iconId={link.iconId}/>
                             ))}
 
                         </FlexWrapper>

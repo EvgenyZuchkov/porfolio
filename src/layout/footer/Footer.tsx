@@ -40,7 +40,7 @@ const StyledFooter = styled.footer`
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.44444;
+    line-height: 1.5;
 `
 
 const UpBlock = styled.div`
@@ -50,7 +50,7 @@ const UpBlock = styled.div`
         content: "";
         display: block;
         position: absolute;
-        background: ${Theme.colors.pseudoBorderColor};
+        background: ${Theme.colors.gradient};
         width: 100%;
         height: 2px;
         bottom: -45px;
@@ -68,7 +68,7 @@ const Email = styled.a`
 
 const Text = styled.span`
     text-align: center;
-    background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+    background: ${Theme.colors.gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

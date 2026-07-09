@@ -39,7 +39,7 @@ const Title = styled.span`
     color: ${Theme.colors.secondaryText};
 
     span {
-        background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+        background: ${Theme.colors.gradient};
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

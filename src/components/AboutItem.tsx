@@ -79,7 +79,7 @@ const SecondaryBlock = styled.div`
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: ${Theme.colors.pseudoBorderColor};
+        background: ${Theme.colors.gradient};
         bottom: -25px;
     }
 `

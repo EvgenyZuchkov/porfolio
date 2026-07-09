@@ -10,7 +10,7 @@ type LinkPropsType = {
 export const Link = (props: LinkPropsType) => {
     return (
         <FlexWrapper gap={'10px'}>
-            <Icon iconId={'icon-chain-white'} width={'20px'} height={'20px'}/>
+            <Icon iconId={props.iconId} width={'20px'} height={'20px'}/>
             <LinkText>{props.text}</LinkText>
         </FlexWrapper>
     )
@@ -19,7 +19,7 @@ export const Link = (props: LinkPropsType) => {
 const LinkText = styled.a`
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.625;
+    line-height: 1.7;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #fff;

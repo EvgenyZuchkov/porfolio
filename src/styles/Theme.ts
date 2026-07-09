@@ -6,6 +6,11 @@ export const Theme = {
         backgroundInput: '#252527',
         formFontColor: '#495057',
         formBorderColor: '#4a4a4a',
-        pseudoBorderColor: '#42446e',
+        gradient: 'linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%)',
+    },
+
+    media: {
+        tablet: 'screen and (max-width: 850px)',
+        mobile: 'screen and (max-width: 576px)',
     }
 }
