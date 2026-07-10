@@ -1,5 +1,6 @@
-import {Theme} from "../../../../styles/Theme.ts";
+import {theme} from "../../../../styles/Theme.ts";
 import styled from "styled-components";
+import {font} from "../../../../styles/Common.ts";
 
 type AboutSectionTitleProps = {
     title: string;
@@ -11,10 +12,6 @@ export const AboutSectionTitle = (props: AboutSectionTitleProps) => (
 )
 
 const StyledSectionTittle = styled.h2`
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 1.2381;
-    letter-spacing: -0.01em;
-    color: ${Theme.colors.secondaryText};
+    ${font({fontWeight: 700, lineHeight: 1.23, letterSpacing: '-0.01em', color: theme.colors.secondaryText, Fmax: 42, Fmin: 27})}
     margin: 38px 0;
 `

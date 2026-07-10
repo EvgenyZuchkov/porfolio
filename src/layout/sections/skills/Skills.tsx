@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Skills = () => {
 
@@ -37,4 +38,11 @@ export const Skills = () => {
 }
 
 const StyledSkills = styled.section`
+    @media ${theme.media.mobile} {
+        ${FlexWrapper} {
+            gap: 50px;
+        }
+    }
+    
+    
 `

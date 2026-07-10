@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme.ts";
 
 export const FooterNavigation = () => {
 
@@ -32,11 +33,19 @@ const StylesFooterNavigation = styled.nav`
 const NavList = styled.ul`
     display: flex;
     gap: 52px;
+    
+    
+    @media ${theme.media.tablet} {
+        gap: unset;
+        justify-content: center;
+    }
 `
 
 const Item = styled.li`
+    flex-grow: 1;
 `
 
 const Link = styled.a`
-
+    display: flex;
+    justify-content: center;
 `

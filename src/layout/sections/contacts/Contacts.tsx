@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {Container} from "../../../components/Container.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Theme} from "../../../styles/Theme.ts";
+import {theme} from "../../../styles/Theme.ts";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
 
 export const Contacts = () => {
@@ -42,13 +42,13 @@ const StyledForm = styled.form`
 
 const Field = styled.input`
     width: 100%;
-    background: ${Theme.colors.backgroundInput};
-    border: 1px solid ${Theme.colors.formBorderColor};
+    background: ${theme.colors.backgroundInput};
+    border: 1px solid ${theme.colors.formBorderColor};
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.05em;
-    color: ${Theme.colors.formFontColor};
+    color: ${theme.colors.formFontColor};
     padding: 7px 15px;
 
     &::placeholder {
@@ -56,12 +56,12 @@ const Field = styled.input`
         font-weight: 400;
         font-size: 12px;
         letter-spacing: 0.05em;
-        color: ${Theme.colors.formFontColor};
+        color: ${theme.colors.formFontColor};
         text-transform: capitalize;
     }
 
     &:focus-visible {
-        outline: 1px solid ${Theme.colors.formBorderColor};;
+        outline: 1px solid ${theme.colors.formBorderColor};;
     }
 `
 
@@ -69,9 +69,9 @@ const Button = styled.button`
     width: 150px;
     padding: 5px 10px;
     margin: 0 auto;
-    color: ${Theme.colors.secondaryText};
-    background-color: ${Theme.colors.backgroundInput};
-    border: 1px solid ${Theme.colors.formBorderColor};
+    color: ${theme.colors.secondaryText};
+    background-color: ${theme.colors.backgroundInput};
+    border: 1px solid ${theme.colors.formBorderColor};
     border-radius: 3px;
     cursor: pointer;
     font-family: "Poppins", sans-serif;

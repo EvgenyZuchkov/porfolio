@@ -5,6 +5,7 @@ import intership from '../../../assets/images/intership.png'
 import {Container} from "../../../components/Container.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {AboutSectionTitle} from "./aboutTitle/AboutSectionTitle.tsx";
+import {font} from "../../../styles/Common.ts";
 
 export const About = () => {
 
@@ -95,9 +96,7 @@ const StyledAboutWrap = styled.div`
 `
 
 const StyledDescription = styled.p`
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.44444;
+    ${font({lineHeight: 1.4, Fmax: 18, Fmin: 15})}
 `
 
 const StyledAboutPart = styled.div`

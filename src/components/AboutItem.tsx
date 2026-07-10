@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import {Icon} from "./icon/Icon.tsx";
 import {FlexWrapper} from "./FlexWrapper.tsx";
-import {Theme} from "../styles/Theme.ts";
+import {theme} from "../styles/Theme.ts";
+import {font} from "../styles/Common.ts";
 
 type AboutItemPropsType = {
     title: string
@@ -64,6 +65,7 @@ const StyledAboutItem = styled.div`
 `
 
 const Title = styled.h3`
+    ${font({lineHeight: 1.4, letterSpacing: '0.05em', color: theme.colors.secondaryText, Fmax: 20, Fmin: 13})}
 `
 
 const WorkTime = styled.img`
@@ -79,7 +81,7 @@ const SecondaryBlock = styled.div`
         position: absolute;
         width: 100%;
         height: 2px;
-        background: ${Theme.colors.gradient};
+        background: ${theme.colors.gradient};
         bottom: -25px;
     }
 `
@@ -89,11 +91,9 @@ const RightBlock = styled.div`
     width: 100%`
 
 const Text = styled.span`
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 2.33333;
-    letter-spacing: 0.08em;
+    ${font({fontWeight: 500, lineHeight: 2.3, letterSpacing: '0.08em', Fmax: 12, Fmin: 10})}
 `
 
 const PeriodOfWork = styled.time`
+    ${font({fontWeight: 500, lineHeight: 2.3, letterSpacing: '0.08em', Fmax: 12, Fmin: 10})}
 `

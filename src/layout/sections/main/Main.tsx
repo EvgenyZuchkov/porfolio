@@ -2,13 +2,15 @@ import styled from "styled-components";
 import photo from "../../../assets/images/photo.png";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
-import {Theme} from "../../../styles/Theme.ts";
+import {theme} from "../../../styles/Theme.ts";
+import {font} from "../../../styles/Common.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justifyContent={'center'} alignItems={'center'} gap={'198px'} height={'100%'}>
+                <FlexWrapper justifyContent={'center'} alignItems={'center'} height={'100%'}
+                             wrap={'wrap'}>
                     <Title>
                         <div>Hi 👋,</div>
                         <div>My name is</div>
@@ -32,17 +34,25 @@ const StyledMain = styled.section`
 `
 
 const Title = styled.span`
-    font-weight: 700;
-    font-size: 58px;
-    line-height: 1.2069;
-    letter-spacing: -0.02em;
-    color: ${Theme.colors.secondaryText};
-
+    flex-grow: 1;
+    ${font({
+        fontWeight: 700,
+        lineHeight: 1.2,
+        letterSpacing: '-0.02em',
+        color: '${theme.colors.gradient}',
+        Fmax: 58,
+        Fmin: 35
+    })}
+    
     span {
-        background: ${Theme.colors.gradient};
+        background: ${theme.colors.gradient};
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+    
+    @media ${theme.media.tablet} {
+        flex-grow: unset;
     }
 
 `
@@ -73,4 +83,9 @@ const Photo = styled.img`
     height: 349px;
     position: relative;
     z-index: 1;
+    
+    @media ${theme.media.mobile} {
+        width: calc(349px * 0.9);
+        height: calc(349px * 0.9);
+    }
 `;

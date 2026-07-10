@@ -1,4 +1,4 @@
-export const Theme = {
+export const theme = {
     colors: {
         background: '#191919',
         primaryText: '#a7a7a7',
@@ -11,6 +11,6 @@ export const Theme = {
 
     media: {
         tablet: 'screen and (max-width: 850px)',
-        mobile: 'screen and (max-width: 576px)',
+        mobile: 'screen and (max-width: 600px)',
     }
 }

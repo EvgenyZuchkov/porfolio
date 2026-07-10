@@ -4,7 +4,8 @@ import {Logo} from "../../components/logo/Logo.tsx";
 import {FooterNavigation} from "./footerNavigation/FooterNavigation.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Theme} from "../../styles/Theme.ts";
+import {theme} from "../../styles/Theme.ts";
+import {font} from "../../styles/Common.ts";
 
 export const Footer = () => {
     return (
@@ -23,7 +24,7 @@ export const Footer = () => {
                     </UpBlock>
 
                     <BottomBlock>
-                        <FlexWrapper flexDirection={'row'} justifyContent={'space-between'}>
+                        <FlexWrapper flexDirection={'row'} justifyContent={'space-between'} gap={'15px'}>
                             <FooterNavigation/>
                             <Text><span>Designed and built
                                 by </span>Pavan MG <span>with</span> Love <span>& </span>Coffee</Text>
@@ -37,10 +38,8 @@ export const Footer = () => {
 }
 
 const StyledFooter = styled.footer`
-    font-family: "DM Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.5;
+    ${font({family: '"DM Sans", sans-serif', lineHeight: 1.5, Fmax: 18, Fmin: 14})}
+
 `
 
 const UpBlock = styled.div`
@@ -50,14 +49,26 @@ const UpBlock = styled.div`
         content: "";
         display: block;
         position: absolute;
-        background: ${Theme.colors.gradient};
+        background: ${theme.colors.gradient};
         width: 100%;
         height: 2px;
         bottom: -45px;
     }
+
+    @media ${theme.media.tablet} {
+        ${FlexWrapper} {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
 `
 
 const BottomBlock = styled.div`
+    @media ${theme.media.tablet} {
+        ${FlexWrapper} {
+            flex-direction: column;
+        }
+    }
 `
 
 const NumberPhone = styled.a`
@@ -68,14 +79,18 @@ const Email = styled.a`
 
 const Text = styled.span`
     text-align: center;
-    background: ${Theme.colors.gradient};
+    background: ${theme.colors.gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     span {
         background: none;
-        color: ${Theme.colors.primaryText};
-        -webkit-text-fill-color: ${Theme.colors.primaryText};
+        color: ${theme.colors.primaryText};
+        -webkit-text-fill-color: ${theme.colors.primaryText};
+    }
+    
+    @media ${theme.media.tablet} {
+        padding-bottom: 25px;
     }
 `

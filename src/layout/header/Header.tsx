@@ -4,7 +4,7 @@ import {Menu} from "./menu/Menu.tsx";
 import {SocialLinks} from "../../components/SocialLinks.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Theme} from "../../styles/Theme.ts";
+import {theme} from "../../styles/Theme.ts";
 import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
 import {Link} from "../../components/link/Link.tsx";
 
@@ -40,7 +40,7 @@ const StyledHeader = styled.header`
     top: 0;
     width: 100%;
     z-index: 9999;
-    background-color: ${Theme.colors.background}
+    background-color: ${theme.colors.background}
 `
 
 const DesktopMenu = styled.div`
@@ -49,7 +49,7 @@ const DesktopMenu = styled.div`
     align-items: center;
     gap: 51px;
     
-    @media ${Theme.media.tablet} {
+    @media ${theme.media.tablet} {
     display: none;
 }
 `
@@ -57,8 +57,8 @@ const DesktopMenu = styled.div`
 const BurgerBtn = styled.button`
     display: none;
     
-    @media ${Theme.media.tablet} {
+    @media ${theme.media.tablet} {
         display: block;
-        color: ${Theme.colors.primaryText}
+        color: ${theme.colors.primaryText}
     }
 `

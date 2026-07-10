@@ -1,6 +1,6 @@
 import styled, {css} from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Theme} from "../../../styles/Theme.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const MobileMenu = () => {
@@ -37,7 +37,7 @@ export const MobileMenu = () => {
 const StyledNav = styled.nav`
     display: none;
 
-    @media ${Theme.media.tablet} {
+    @media ${theme.media.tablet} {
         //display: block;
     }
 `

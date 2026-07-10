@@ -8,6 +8,7 @@ import FivesImg from "../../../assets/images/projects-images/2.png"
 import SixImg from "../../../assets/images/projects-images/1.png"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Projects = () => {
     const projectItems = [
@@ -58,4 +59,10 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
+    @media ${theme.media.tablet} {
+        padding: 0 15px;
+        ${FlexWrapper} {
+            gap: 20px;
+        }
+    }
 `

@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {Theme} from "./Theme.ts";
+import {theme} from "./Theme.ts";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -13,12 +13,19 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         font-family: "Poppins", sans-serif;
-        background-color: ${Theme.colors.background};
-        color: ${Theme.colors.primaryText};
+        background-color: ${theme.colors.background};
+        color: ${theme.colors.primaryText};
     }
     
     section {
         padding: 100px 0;
+        
+        @media ${theme.media.tablet} {
+            padding: 90px 0;
+        }
+        @media ${theme.media.mobile} {
+            padding: 80px 0;
+        }
     }
 
     a,
