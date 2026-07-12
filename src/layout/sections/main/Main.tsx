@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import photo from "../../../assets/images/photo.png";
+import photo from "../../../assets/images/avatar/avatar.png";
+import photo2x from "../../../assets/images/avatar/avatar@2.png";
+import photo3x from "../../../assets/images/avatar/avatar@3.png";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
@@ -12,14 +14,14 @@ export const Main = () => {
                 <FlexWrapper justifyContent={'center'} alignItems={'center'} height={'100%'}
                              wrap={'wrap'}>
                     <Title>
-                        <div>Hi 👋,</div>
-                        <div>My name is</div>
-                        <div><span>Pavan MG</span></div>
+                        <span>Hi 👋,</span>
+                        <span>My name is</span>
+                        <span><span>Pavan MG</span></span>
                         I build things for web
                     </Title>
 
                     <PhotoWrapper>
-                        <Photo src={photo} alt="avatar"/>
+                        <Photo srcSet={`${photo} 1x, ${photo2x} 2x, ${photo3x} 3x`} alt="avatar"/>
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
@@ -33,7 +35,7 @@ const StyledMain = styled.section`
     overflow-x: clip;
 `
 
-const Title = styled.span`
+const Title = styled.h1`
     flex-grow: 1;
     ${font({
         fontWeight: 700,
@@ -45,6 +47,10 @@ const Title = styled.span`
     })}
     
     span {
+        display: block;
+    }
+    
+    span > span {
         background: ${theme.colors.gradient};
         background-clip: text;
         -webkit-background-clip: text;

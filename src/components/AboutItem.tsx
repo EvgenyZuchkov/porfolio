@@ -81,7 +81,7 @@ const SecondaryBlock = styled.div`
         position: absolute;
         width: 100%;
         height: 2px;
-        background: ${theme.colors.gradient};
+        background: ${theme.colors.formBorderColor};
         bottom: -25px;
     }
 `

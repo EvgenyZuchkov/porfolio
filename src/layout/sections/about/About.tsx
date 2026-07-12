@@ -56,22 +56,24 @@ export const About = () => {
                     </StyledAboutPart>
 
                     <StyledAboutPart>
-                        <FlexWrapper flexDirection="column" gap={'55px'}>
+                        <FlexWrapper flexDirection="column">
                             <AboutSectionTitle title={'Work Experience'}/>
-                            {aboutWorkItems.map((item, index) => (
-                                <AboutItem key={index}
-                                           title={item.title}
-                                           src={item.src}
-                                           company={item.company}
-                                           location={item.location}
-                                           periodOfWork={item.periodOfWork}/>
-                            ))}
+                            <FlexWrapper flexDirection={'column'} gap={'55px'}>
+                                {aboutWorkItems.map((item, index) => (
+                                    <AboutItem key={index}
+                                               title={item.title}
+                                               src={item.src}
+                                               company={item.company}
+                                               location={item.location}
+                                               periodOfWork={item.periodOfWork}/>
+                                ))}
+                            </FlexWrapper>
                         </FlexWrapper>
 
                     </StyledAboutPart>
 
                     <StyledAboutPart>
-                        <AboutSectionTitle title={'Education'}/>
+                        <AboutSectionTitle title={'Education'} margin={'64px 0 38px'}/>
                         {aboutEducationItems.map((item, index) => (
                             <AboutItem key={index}
                                        title={item.title}

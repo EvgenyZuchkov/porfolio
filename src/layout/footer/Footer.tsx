@@ -49,7 +49,7 @@ const UpBlock = styled.div`
         content: "";
         display: block;
         position: absolute;
-        background: ${theme.colors.gradient};
+        background: ${theme.colors.formBorderColor};
         width: 100%;
         height: 2px;
         bottom: -45px;

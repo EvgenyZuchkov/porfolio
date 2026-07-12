@@ -26,7 +26,7 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject>
             <FlexWrapper flexDirection={'column'} height={'100%'}>
-                <Image src={props.img} alt="Project Image"/>
+                <Image srcSet={props.img} alt="Project Image"/>
 
                 <StyledProjectText>
                     <FlexWrapper flexDirection="column" gap={'0px'} height={'100%'}>
