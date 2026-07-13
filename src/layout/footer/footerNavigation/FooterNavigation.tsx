@@ -1,51 +1,16 @@
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme.ts";
+import * as React from "react";
+import {S} from "../Footer_ Styles";
 
-export const FooterNavigation = () => {
-
-    const itemsLinks = [
-        'Home',
-        'About',
-        'Technologies',
-        'Projects',
-        'Contact',
-    ]
-
+export const FooterNavigation: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
     return (
-        <StylesFooterNavigation>
-            <NavList>
+        <S.FooterNavigation>
+            <S.NavList>
 
-                    {itemsLinks.map(item => (
-                        <Item key={item}><Link href={'#'}>{item}</Link></Item>
-                    ))}
+                {props.menuItems.map((item, index) => (
+                    <S.Item key={index}><S.Link href={'#'}>{item}</S.Link></S.Item>
+                ))}
 
-            </NavList>
-        </StylesFooterNavigation>
-
-
+            </S.NavList>
+        </S.FooterNavigation>
     )
 }
-
-const StylesFooterNavigation = styled.nav`
-    margin-bottom: 61px;
-`
-
-const NavList = styled.ul`
-    display: flex;
-    gap: 52px;
-    
-    
-    @media ${theme.media.tablet} {
-        gap: unset;
-        justify-content: center;
-    }
-`
-
-const Item = styled.li`
-    flex-grow: 1;
-`
-
-const Link = styled.a`
-    display: flex;
-    justify-content: center;
-`

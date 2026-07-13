@@ -1,6 +1,7 @@
 import {theme} from "../../../../styles/Theme.ts";
 import styled from "styled-components";
 import {font} from "../../../../styles/Common.ts";
+import * as React from "react";
 
 type AboutSectionTitleProps = {
     title: string;
@@ -10,7 +11,7 @@ type AboutSectionTitleProps = {
 type StyledSectionTittleProps = {
     margin?: string
 }
-export const AboutSectionTitle = (props: AboutSectionTitleProps) => (
+export const AboutSectionTitle: React.FC<AboutSectionTitleProps> = (props: AboutSectionTitleProps) => (
     <StyledSectionTitle margin={props.margin}>
         {props.title}
     </StyledSectionTitle>

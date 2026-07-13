@@ -1,8 +1,9 @@
-import {FlexWrapper} from "./FlexWrapper.tsx";
-import {Description} from "./Description.tsx";
+import {FlexWrapper} from "./FlexWrapper.ts";
+import {Description} from "./Description.ts";
 import styled from "styled-components";
 import {theme} from "../styles/Theme.ts";
 import {font} from "../styles/Common.ts";
+import * as React from "react";
 
 type SectionTitleBlockProps = {
     tittle: string;
@@ -10,7 +11,7 @@ type SectionTitleBlockProps = {
     marginBottom?: string
 }
 
-export const SectionTittleBlock = (props: SectionTitleBlockProps) => {
+export const SectionTittleBlock: React.FC<SectionTitleBlockProps> = (props: SectionTitleBlockProps) => {
     return (
         <StyledSectionTitleBlock $marginBottom={props.marginBottom}>
             <FlexWrapper flexDirection={'column'} alignItems={'center'} justifyContent={'center'}>

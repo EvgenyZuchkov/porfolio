@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import {Project} from "./project/Project.tsx";
 import FirstImg from "../../../assets/images/projects-images/6/6.png"
 import FirstImgX2 from "../../../assets/images/projects-images/6/6@2.png"
@@ -18,11 +17,12 @@ import FivesImgX3 from "../../../assets/images/projects-images/2/2@3.png"
 import SixImg from "../../../assets/images/projects-images/1/1.png"
 import SixImgX2 from "../../../assets/images/projects-images/1/1@2.png"
 import SixImgX3 from "../../../assets/images/projects-images/1/1@3.png"
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
-import {theme} from "../../../styles/Theme.ts";
+import {S} from "./Projects_Styles.ts";
+import * as React from "react";
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
     const projectItems = [
         {
             img: `${FirstImg} 1x, ${FirstImgX2} 2x, ${FirstImgX3} 3x`,
@@ -57,7 +57,7 @@ export const Projects = () => {
     ]
 
     return (
-        <StyledProjects>
+        <S.Projects>
             <SectionTittleBlock tittle={'Projects'} text={'Things I’ve built so far'} marginBottom={'95px'}/>
             <FlexWrapper gap={'48px'} wrap={'wrap'} justifyContent={'center'}>
 
@@ -66,16 +66,6 @@ export const Projects = () => {
                 ))}
 
             </FlexWrapper>
-        </StyledProjects>
+        </S.Projects>
     )
 }
-
-const StyledProjects = styled.section`
-    @media ${theme.media.tablet} {
-        padding: 0 15px;
-
-        ${FlexWrapper} {
-            gap: 20px;
-        }
-    }
-`

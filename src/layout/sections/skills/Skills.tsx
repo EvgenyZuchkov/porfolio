@@ -1,11 +1,11 @@
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import styled from "styled-components";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Skill} from "./skill/Skill.tsx";
 import {Container} from "../../../components/Container.ts";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
-import {theme} from "../../../styles/Theme.ts";
+import {S} from "./Skills_Styles.ts";
+import * as React from "react";
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
 
     const idSkills = [
         'icon-html5',
@@ -23,26 +23,16 @@ export const Skills = () => {
     ]
 
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTittleBlock tittle={'My Tech Stack'} text={'Technologies I’ve been working with recently'}/>
-                    <FlexWrapper flexDirection={'row'} justifyContent={'space-between'} gap={'95px'} wrap={'wrap'}>
-                        {idSkills.map((iconId) => (
-                            <Skill key={iconId} iconId={iconId}/>
-                        ))}
-                    </FlexWrapper>
+                <FlexWrapper flexDirection={'row'} justifyContent={'space-between'} gap={'95px'} wrap={'wrap'}>
+                    {idSkills.map((iconId, index) => (
+                        <Skill key={index} iconId={iconId}/>
+                    ))}
+                </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
 
     )
 }
-
-const StyledSkills = styled.section`
-    @media ${theme.media.mobile} {
-        ${FlexWrapper} {
-            gap: 50px;
-        }
-    }
-    
-    
-`

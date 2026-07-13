@@ -1,7 +1,8 @@
 import {Link} from "./link/Link.tsx";
 import styled from "styled-components";
+import * as React from "react";
 
-export const SocialLinks = () => {
+export const SocialLinks: React.FC = () => {
     return (
         <SocialLinksNav>
             <StyledSocialLinks>

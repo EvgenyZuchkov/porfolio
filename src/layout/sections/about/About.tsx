@@ -1,13 +1,13 @@
-import styled from "styled-components";
-import {AboutItem} from "../../../components/AboutItem.tsx";
+import {AboutItem} from "./AboutItem.tsx";
 import fullTime from '../../../assets/images/full-time.png'
 import intership from '../../../assets/images/intership.png'
 import {Container} from "../../../components/Container.ts";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {AboutSectionTitle} from "./aboutTitle/AboutSectionTitle.tsx";
-import {font} from "../../../styles/Common.ts";
+import * as React from "react";
+import {S} from "./About_Styles.ts";
 
-export const About = () => {
+export const About: React.FC = () => {
 
     const aboutWorkItems = [
         {
@@ -43,19 +43,19 @@ export const About = () => {
     ]
 
     return (
-        <StyledAbout>
+        <S.About>
             <Container>
-                <StyledAboutWrap>
-                    <StyledAboutPart>
+                <S.AboutWrap>
+                    <S.AboutPart>
                         <AboutSectionTitle title={'About Me'}/>
-                        <StyledDescription>
+                        <S.Description>
                             The Generator App is an online tool that helps you to export ready-made
                             templates ready to work as your future website. It helps you to combine slides, panels and
                             other components and export it as a set of static files: HTML/CSS/JS.
-                        </StyledDescription>
-                    </StyledAboutPart>
+                        </S.Description>
+                    </S.AboutPart>
 
-                    <StyledAboutPart>
+                    <S.AboutPart>
                         <FlexWrapper flexDirection="column">
                             <AboutSectionTitle title={'Work Experience'}/>
                             <FlexWrapper flexDirection={'column'} gap={'46px'}>
@@ -70,9 +70,9 @@ export const About = () => {
                             </FlexWrapper>
                         </FlexWrapper>
 
-                    </StyledAboutPart>
+                    </S.AboutPart>
 
-                    <StyledAboutPart>
+                    <S.AboutPart>
                         <AboutSectionTitle title={'Education'} margin={'60px 0 38px'}/>
                         {aboutEducationItems.map((item, index) => (
                             <AboutItem key={index}
@@ -81,42 +81,10 @@ export const About = () => {
                                        company={item.company}
                                        periodOfWork={item.periodOfWork}/>
                         ))}
-                    </StyledAboutPart>
-                </StyledAboutWrap>
+                    </S.AboutPart>
+                </S.AboutWrap>
             </Container>
-        </StyledAbout>
+        </S.About>
 
     )
 }
-
-const StyledAbout = styled.section`
-    overflow-x: clip;
-`
-
-const StyledAboutWrap = styled.div`
-    max-width: 710px;
-    width: 100%;
-    position: relative;
-
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 834px;
-        height: 834px;
-        background-image: url('/drawing.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: -62px;
-        right: -133%;
-        
-    }
-`
-
-const StyledDescription = styled.p`
-    ${font({lineHeight: 1.4, Fmax: 18, Fmin: 15})}
-`
-
-const StyledAboutPart = styled.div`
-`
-

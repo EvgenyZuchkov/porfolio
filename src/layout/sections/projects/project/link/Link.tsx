@@ -1,5 +1,5 @@
 import {Icon} from "../../../../../components/icon/Icon.tsx";
-import {FlexWrapper} from "../../../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../../../components/FlexWrapper.ts";
 import styled from "styled-components";
 
 type LinkPropsType = {
