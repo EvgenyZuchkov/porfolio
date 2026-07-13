@@ -58,7 +58,7 @@ export const Projects = () => {
 
     return (
         <StyledProjects>
-            <SectionTittleBlock tittle={'Projects'} text={'Things I’ve built so far'}/>
+            <SectionTittleBlock tittle={'Projects'} text={'Things I’ve built so far'} marginBottom={'95px'}/>
             <FlexWrapper gap={'48px'} wrap={'wrap'} justifyContent={'center'}>
 
                 {projectItems.map((item, index) => (

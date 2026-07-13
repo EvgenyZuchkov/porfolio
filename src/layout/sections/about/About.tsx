@@ -58,7 +58,7 @@ export const About = () => {
                     <StyledAboutPart>
                         <FlexWrapper flexDirection="column">
                             <AboutSectionTitle title={'Work Experience'}/>
-                            <FlexWrapper flexDirection={'column'} gap={'55px'}>
+                            <FlexWrapper flexDirection={'column'} gap={'46px'}>
                                 {aboutWorkItems.map((item, index) => (
                                     <AboutItem key={index}
                                                title={item.title}
@@ -73,7 +73,7 @@ export const About = () => {
                     </StyledAboutPart>
 
                     <StyledAboutPart>
-                        <AboutSectionTitle title={'Education'} margin={'64px 0 38px'}/>
+                        <AboutSectionTitle title={'Education'} margin={'60px 0 38px'}/>
                         {aboutEducationItems.map((item, index) => (
                             <AboutItem key={index}
                                        title={item.title}
@@ -90,11 +90,27 @@ export const About = () => {
 }
 
 const StyledAbout = styled.section`
+    overflow-x: clip;
 `
 
 const StyledAboutWrap = styled.div`
     max-width: 710px;
     width: 100%;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 834px;
+        height: 834px;
+        background-image: url('/drawing.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: -62px;
+        right: -133%;
+        
+    }
 `
 
 const StyledDescription = styled.p`

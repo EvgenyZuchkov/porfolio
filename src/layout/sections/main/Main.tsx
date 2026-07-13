@@ -30,9 +30,10 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-    min-height: 100vh;
+    //min-height: 100vh;
     display: flex;
     overflow-x: clip;
+    padding: 330px 0 50px;
 `
 
 const Title = styled.h1`

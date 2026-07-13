@@ -15,7 +15,7 @@ export const Menu = () => {
     return (
         <StyledNav>
             <NavList>
-                <FlexWrapper gap={'54px'} >
+                <FlexWrapper gap={'82px'} >
                     {itemsLinks.map(link => (
                         <Item key={link}><Link href="#">{link}</Link></Item>
                     ))}

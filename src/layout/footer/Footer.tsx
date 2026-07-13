@@ -17,9 +17,12 @@ export const Footer = () => {
                     <UpBlock>
                         <FlexWrapper flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'}>
                             <Logo iconId={'logo-gray'}/>
-                            <NumberPhone href={'tel:+91 12345 09876'}>+91 12345 09876</NumberPhone>
-                            <Email href={'mailto: info@example.com'}>info@example.com</Email>
-                            <SocialLinks/>
+                            <FlexWrapper justifyContent={'space-between'} alignItems={'center'} gap={'100px'}>
+                                <NumberPhone href={'tel:+91 12345 09876'}>+91 12345 09876</NumberPhone>
+                                <Email href={'mailto: info@example.com'}>info@example.com</Email>
+                                <SocialLinks/>
+                            </FlexWrapper>
+
                         </FlexWrapper>
                     </UpBlock>
 
@@ -83,6 +86,7 @@ const Text = styled.span`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-right: 30px;
 
     span {
         background: none;

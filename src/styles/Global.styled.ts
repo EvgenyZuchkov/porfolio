@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Poppins", sans-serif;
         background-color: ${theme.colors.background};
         color: ${theme.colors.primaryText};
+        min-width: 360px;
     }
     
     section {

@@ -40,7 +40,8 @@ const StyledHeader = styled.header`
     top: 0;
     width: 100%;
     z-index: 9999;
-    background-color: ${theme.colors.background}
+    background-color: ${theme.colors.background};
+    padding: 30px 0;
 `
 
 const DesktopMenu = styled.div`
