@@ -1,15 +1,26 @@
 import {theme} from "../../../styles/Theme.ts";
 import styled from "styled-components";
 import {font} from "../../../styles/Common.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 
 const Main = styled.section`
     //min-height: 100vh;
     display: flex;
     overflow-x: clip;
     padding: 330px 0 50px;
+    
+    @media ${theme.media.tablet} {
+        padding: 150px 0 50px;
+    }
+    
+    ${FlexWrapper} {
+        @media ${theme.media.desktop} {
+            gap: 100px;
+        }
+    }
 `
 
-const Title = styled.h1`
+const Title = styled.span`
     flex-grow: 1;
     ${font({
     fontWeight: 700,
@@ -19,6 +30,17 @@ const Title = styled.h1`
     Fmax: 58,
     Fmin: 35
 })}
+    
+    h1 {
+        ${font({
+            fontWeight: 700,
+            lineHeight: 1.2,
+            letterSpacing: '-0.02em',
+            color: '${theme.colors.gradient}',
+            Fmax: 58,
+            Fmin: 35
+        })}
+    }
     
     span {
         display: block;
@@ -31,7 +53,7 @@ const Title = styled.h1`
         -webkit-text-fill-color: transparent;
     }
     
-    @media ${theme.media.tablet} {
+    @media ${theme.media.desktop} {
         flex-grow: unset;
     }
 

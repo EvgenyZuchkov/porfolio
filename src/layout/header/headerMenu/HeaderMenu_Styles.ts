@@ -46,12 +46,18 @@ const NavMobile = styled.nav`
     }
 `
 
-const BurgerBtn = styled.div<{ isOpen: boolean }>`
-    width: 200px;
-    height: 200px;
+const BurgerBtn = styled.button<{ isOpen: boolean }>`
     position: fixed;
-    top: -100px;
-    right: -100px;
+    top: 30px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: ${theme.colors.primaryText};
+    cursor: pointer;
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -61,8 +67,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999;
-    display: none;
+    z-index: 1000;
+    display: none;;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;

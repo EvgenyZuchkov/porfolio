@@ -21,51 +21,60 @@ import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {SectionTittleBlock} from "../../../components/SectionTittleBlock.tsx";
 import {S} from "./Projects_Styles.ts";
 import * as React from "react";
+import {Container} from "../../../components/Container.ts";
+import {TabsMenu} from "./TabsMenu.tsx";
+
+const TabItems = ['HTML', 'SASS', 'JavaScript', 'React'];
+
+const projectItems = [
+    {
+        img: `${FirstImg} 1x, ${FirstImgX2} 2x, ${FirstImgX3} 3x`,
+        title: 'Project Tile goes here',
+        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    },
+    {
+        img: `${SecondImg} 1x, ${SecondImgX2} 2x, ${SecondImgX3} 3x`,
+        title: 'Project Tile goes here',
+        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    },
+    {
+        img: `${ThirtyImage} 1x, ${ThirtyImageX2} 2x, ${ThirtyImageX3} 3x`,
+        title: 'Project Tile goes here',
+        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    },
+    {
+        img: `${FourthImage} 1x, ${FourthImageX2} 2x, ${FourthImageX3} 3x`,
+        title: 'Project Tile goes here',
+        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    },
+    {
+        img: `${FivesImg} 1x, ${FivesImgX2} 2x, ${FivesImgX3} 3x`,
+        title: 'Project Tile goes here',
+        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    },
+    {
+        img: `${SixImg} 1x, ${SixImgX2} 2x, ${SixImgX3} 3x`,
+        title: 'Project Tile goes here',
+        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    }
+]
 
 export const Projects: React.FC = () => {
-    const projectItems = [
-        {
-            img: `${FirstImg} 1x, ${FirstImgX2} 2x, ${FirstImgX3} 3x`,
-            title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-        },
-        {
-            img: `${SecondImg} 1x, ${SecondImgX2} 2x, ${SecondImgX3} 3x`,
-            title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-        },
-        {
-            img: `${ThirtyImage} 1x, ${ThirtyImageX2} 2x, ${ThirtyImageX3} 3x`,
-            title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-        },
-        {
-            img: `${FourthImage} 1x, ${FourthImageX2} 2x, ${FourthImageX3} 3x`,
-            title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-        },
-        {
-            img: `${FivesImg} 1x, ${FivesImgX2} 2x, ${FivesImgX3} 3x`,
-            title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-        },
-        {
-            img: `${SixImg} 1x, ${SixImgX2} 2x, ${SixImgX3} 3x`,
-            title: 'Project Tile goes here',
-            description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
-        }
-    ]
-
     return (
         <S.Projects>
-            <SectionTittleBlock tittle={'Projects'} text={'Things I’ve built so far'} marginBottom={'95px'}/>
-            <FlexWrapper gap={'48px'} wrap={'wrap'} justifyContent={'center'}>
+            <Container>
+                <FlexWrapper flexDirection={'column'} gap={'50px'}>
+                    <SectionTittleBlock tittle={'Projects'} text={'Things I’ve built so far'} marginBottom={'15px'}/>
+                    <TabsMenu tabs={TabItems}/>
+                    <FlexWrapper gap={'48px'} wrap={'wrap'} justifyContent={'center'}>
 
-                {projectItems.map((item, index) => (
-                    <Project key={index} img={item.img} title={item.title} description={item.description}/>
-                ))}
+                        {projectItems.map((item, index) => (
+                            <Project key={index} img={item.img} title={item.title} description={item.description}/>
+                        ))}
 
-            </FlexWrapper>
+                    </FlexWrapper>
+                </FlexWrapper>
+            </Container>
         </S.Projects>
     )
 }

@@ -43,18 +43,7 @@ const Field = styled.input`
 `
 
 const Button = styled.button`
-    width: 150px;
-    padding: 5px 10px;
     margin: 0 auto;
-    color: ${theme.colors.secondaryText};
-    background-color: ${theme.colors.backgroundInput};
-    border: 1px solid ${theme.colors.formBorderColor};
-    border-radius: 3px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.05em;
 `
 
 export const S = {

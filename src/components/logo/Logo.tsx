@@ -8,7 +8,7 @@ type LogoPropsType = {
 export const Logo: React.FC<LogoPropsType> = (props: LogoPropsType) => {
     return (
         <a href="">
-            <Icon iconId={props.iconId} width={'97px'} height={'59px'} viewBox={'0 0 100 100'}/>
+            <Icon iconId={props.iconId} width={'97px'} height={'59px'} viewBox={'0 0 97 59'}/>
         </a>
     );
 };

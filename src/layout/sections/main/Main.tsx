@@ -16,7 +16,7 @@ export const Main: React.FC = () => {
                         <span>Hi 👋,</span>
                         <span>My name is</span>
                         <span><span>Pavan MG</span></span>
-                        I build things for web
+                        <h1>I build things for web</h1>
                     </S.Title>
 
                     <S.PhotoWrapper>

@@ -3,7 +3,6 @@ import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.ts";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
-import {Link} from "../../components/link/Link.tsx";
 import * as React from "react";
 import {S} from "./Header_Styles.ts";
 
@@ -34,10 +33,6 @@ export const Header: React.FC = () => {
                     <FlexWrapper justifyContent={"space-between"} alignItems={"center"} gap={'51px'}>
 
                         {width < breakpoint ? <MobileMenu items={items}/> : <DesktopMenu items={items}/>}
-
-                        <S.BurgerBtn>
-                            <Link iconId={'menu'}/>
-                        </S.BurgerBtn>
 
                     </FlexWrapper>
                 </FlexWrapper>

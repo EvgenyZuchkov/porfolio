@@ -23,7 +23,12 @@ const AboutWrap = styled.div`
         background-repeat: no-repeat;
         top: -62px;
         right: -133%;
-        
+    }
+    
+    @media ${theme.media.tablet} {
+        &::before {
+            display: none;
+        }
     }
 `
 
@@ -66,11 +71,11 @@ const RightBlock = styled.div`
     width: 100%`
 
 const Text = styled.span`
-    ${font({fontWeight: 500, lineHeight: 2.3, letterSpacing: '0.08em', Fmax: 12, Fmin: 10})}
+    ${font({fontWeight: 500, lineHeight: 2.3, letterSpacing: '0.08em', Fmax: 12, Fmin: 9})}
 `
 
 const PeriodOfWork = styled.time`
-    ${font({fontWeight: 500, lineHeight: 2.3, letterSpacing: '0.08em', Fmax: 12, Fmin: 10})}
+    ${font({fontWeight: 500, lineHeight: 2.3, letterSpacing: '0.08em', Fmax: 12, Fmin: 9})}
 `
 
 export const S = {

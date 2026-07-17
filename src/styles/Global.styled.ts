@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme.ts";
+import {font} from "./Common.ts";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -40,8 +41,14 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     button {
-        background-color: unset;
-        border: none;
+        width: 150px;
+        padding: 5px 10px;
+        color: ${theme.colors.secondaryText};
+        background-color: ${theme.colors.backgroundInput};
+        border: 1px solid ${theme.colors.formBorderColor};
+        border-radius: 3px;
+        cursor: pointer;
+        ${font({fontWeight: 400, letterSpacing: '0.05em', Fmax: 12, Fmin: 12})}
     }
 
 `

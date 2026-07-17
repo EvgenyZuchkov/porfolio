@@ -45,6 +45,7 @@ const Email = styled.a`
 `
 
 const Text = styled.span`
+    ${font({lineHeight: 1.45, fontWeight: 400, Fmax: 18, Fmin: 12})};
     text-align: center;
     background: ${theme.colors.gradient};
     background-clip: text;
@@ -59,7 +60,7 @@ const Text = styled.span`
     }
     
     @media ${theme.media.tablet} {
-        padding-bottom: 25px;
+        padding: 0 0 25px;
     }
 `
 
