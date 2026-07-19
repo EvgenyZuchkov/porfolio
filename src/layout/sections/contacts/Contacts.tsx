@@ -6,7 +6,7 @@ import {S} from "./Contacts_Styles.ts";
 
 export const Contacts: React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={'contact'}>
             <Container>
                 <FlexWrapper flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
                     <SectionTittleBlock tittle={'Contacts'} marginBottom={'50px'}/>

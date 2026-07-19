@@ -3,9 +3,10 @@ import {Menu} from "../menu/Menu.tsx";
 import * as React from "react";
 import {S} from "../HeaderMenu_Styles.ts";
 import {Icon} from "../../../../components/icon/Icon.tsx";
+import type {HeaderMenuPropsType} from "../desktopMenu/DesktopMenu.tsx";
 
 
-export const MobileMenu: React.FC<{ items: Array<string> }> = (props: { items: Array<string> }) => {
+export const MobileMenu: React.FC<HeaderMenuPropsType> = (props) => {
 
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
     const onBurgerBtnClick = () => {setMobileMenuOpen(!mobileMenuOpen);};

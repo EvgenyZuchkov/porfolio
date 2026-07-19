@@ -20,7 +20,7 @@ const Main = styled.section`
     }
 `
 
-const Title = styled.span`
+const Title = styled.div`
     flex-grow: 1;
     ${font({
     fontWeight: 700,
@@ -42,6 +42,10 @@ const Title = styled.span`
         })}
     }
     
+    h1:first-of-type {
+        display: none;
+    }
+    
     span {
         display: block;
     }
@@ -52,6 +56,7 @@ const Title = styled.span`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    
     
     @media ${theme.media.desktop} {
         flex-grow: unset;

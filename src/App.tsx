@@ -6,6 +6,7 @@ import {Skills} from "./layout/sections/skills/Skills.tsx";
 import {Projects} from "./layout/sections/projects/Projects.tsx";
 import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn.tsx";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Projects/>
             <Contacts/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     )
 }

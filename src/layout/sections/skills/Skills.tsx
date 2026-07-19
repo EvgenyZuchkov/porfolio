@@ -23,7 +23,7 @@ export const Skills: React.FC = () => {
     ]
 
     return (
-        <S.Skills>
+        <S.Skills id={'skills'}>
             <Container>
                 <SectionTittleBlock tittle={'My Tech Stack'} text={'Technologies I’ve been working with recently'}/>
                 <FlexWrapper flexDirection={'row'} justifyContent={'space-between'} gap={'95px'} wrap={'wrap'}>

@@ -5,10 +5,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Container} from "../../../components/Container.ts";
 import {S} from "./Main_Styles.ts";
 import * as React from "react";
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={'home'}>
             <Container>
                 <FlexWrapper justifyContent={'center'} alignItems={'center'} height={'100%'}
                              wrap={'wrap'}>
@@ -16,7 +17,16 @@ export const Main: React.FC = () => {
                         <span>Hi 👋,</span>
                         <span>My name is</span>
                         <span><span>Pavan MG</span></span>
-                        <h1>I build things for web</h1>
+                        <h1>I am a web developer</h1>
+
+                        <Typewriter
+                            options={{
+                                strings: ['I am a web developer'],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+
                     </S.Title>
 
                     <S.PhotoWrapper>

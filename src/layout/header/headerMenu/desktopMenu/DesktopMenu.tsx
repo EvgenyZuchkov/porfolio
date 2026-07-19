@@ -4,8 +4,10 @@ import {SocialLinks} from "../../../../components/SocialLinks.tsx";
 import * as React from "react";
 import { S } from "../HeaderMenu_Styles.ts";
 
+export type HeaderMenuPropsType = {items: Array<{title: string, href: string}>}
 
-export const DesktopMenu: React.FC<{ items: Array<string> }> = (props: { items: Array<string> }) => {
+
+export const DesktopMenu: React.FC<HeaderMenuPropsType> = (props) => {
     return (
         <S.DesktopMenu>
             <S.Nav>

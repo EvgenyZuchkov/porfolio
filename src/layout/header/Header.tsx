@@ -7,11 +7,11 @@ import * as React from "react";
 import {S} from "./Header_Styles.ts";
 
 const items = [
-    'Home',
-    'About',
-    'Tech Stack',
-    'Projects',
-    'Contact',
+    {title: 'Home', href: 'home'},
+    {title: 'About', href: 'about'},
+    {title: 'Tech Stack', href: 'skills'},
+    {title: 'Projects', href: 'projects'},
+    {title: 'Contact', href: 'contact'},
 ]
 
 export const Header: React.FC = () => {

@@ -43,7 +43,7 @@ export const About: React.FC = () => {
     ]
 
     return (
-        <S.About>
+        <S.About id={'about'}>
             <Container>
                 <S.AboutWrap>
                     <S.AboutPart>
