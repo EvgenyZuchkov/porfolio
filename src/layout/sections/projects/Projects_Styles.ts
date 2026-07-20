@@ -15,8 +15,8 @@ const Projects = styled.section`
 
 const Project = styled.div`
     border-radius: 20px;
-    max-width: 369px;
-    width: 100%;
+    //max-width: 369px;
+    //width: 100%;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #363636;
 `

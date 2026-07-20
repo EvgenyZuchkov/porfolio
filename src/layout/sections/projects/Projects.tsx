@@ -24,6 +24,9 @@ import * as React from "react";
 import {Container} from "../../../components/Container.ts";
 import {TabsMenu, type TabsStatusType} from "./TabsMenu.tsx";
 import {useState} from "react";
+import {motion} from "motion/react"
+import {AnimatePresence} from "motion/react"
+
 
 const TabsItems: Array<{ status: TabsStatusType, title: string }> = [
     {
@@ -123,9 +126,18 @@ export const Projects: React.FC = () => {
                               changeFilterStatus={changeFilterStatus}/>
                     <FlexWrapper gap={'48px'} wrap={'wrap'} justifyContent={'center'}>
 
-                        {filteredProjects.map((item, index) => (
-                            <Project key={index} img={item.img} title={item.title} description={item.description}/>
-                        ))}
+                        <AnimatePresence>
+
+                            {filteredProjects.map((item, index) => (
+                                <motion.div layout initial="hidden" animate="visible" exit="hidden" key={index}
+                                            style={{maxWidth: '369px', width: '100%' }}>
+                                    <Project key={index} img={item.img} title={item.title}
+                                             description={item.description}/>
+                                </motion.div>
+                            ))}
+
+                        </AnimatePresence>
+
 
                     </FlexWrapper>
                 </FlexWrapper>
