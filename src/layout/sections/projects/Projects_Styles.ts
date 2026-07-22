@@ -50,6 +50,13 @@ const Stack = styled.p`
     }
 `
 
+const ToggleBtn = styled.button`
+    
+    //@media screen and (min-width: 1280px){
+    //    display: none;
+    //}
+`
+
 export const S = {
     Projects,
     Project,
@@ -58,5 +65,6 @@ export const S = {
     Title,
     Description,
     Stack,
+    ToggleBtn,
 }
 

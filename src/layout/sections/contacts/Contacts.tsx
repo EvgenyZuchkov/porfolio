@@ -38,6 +38,7 @@ export const Contacts: React.FC = () => {
                     <S.Form ref={form} onSubmit={sendEmail}>
                         <S.Field required placeholder={'Enter your name...'} name={'name'}/>
                         <S.Field required placeholder={'Enter your subject...'} name={'subject'}/>
+                        <S.Field required placeholder={'Enter your email...'} name={'email'}/>
                         <S.Field required placeholder={'Enter your message...'} as={'textarea'} name={'message'}/>
                         <S.Button type={'submit'}>Send message</S.Button>
                     </S.Form>
