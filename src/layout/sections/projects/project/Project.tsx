@@ -17,10 +17,24 @@ export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => 
 
     console.log('render')
 
-    useEffect(()=>{
+    const checkScreenWidth = () => {
+        if (window.innerWidth <= 576) {
+            setIsExpanded(false)
+        } else {
+            setIsExpanded(true)
+        }
+    }
+
+    useEffect(() => {
         console.log('useEffect')
-        window.innerWidth <= 576 ? setIsExpanded(false) : setIsExpanded(true)
-    }, [isExpanded])
+        checkScreenWidth()
+        window.addEventListener('resize', checkScreenWidth)
+
+        return () => {
+            window.removeEventListener('resize', checkScreenWidth)
+        }
+    }, [])
+
 
     const links = [
         {
